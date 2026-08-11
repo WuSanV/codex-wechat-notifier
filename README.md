@@ -33,7 +33,7 @@ node --version
 Codex CLI 可以自行执行终端命令，因此你可以直接在 Codex 对话中用自然语言完成安装。把下面的 `YOUR_GITHUB_USERNAME` 替换为实际 GitHub 用户名，对 Codex 说：
 
 ```text
-帮我安装 https://github.com/YOUR_GITHUB_USERNAME/codex-wechat-notifier
+帮我安装 https://github.com/WuSanV/codex-wechat-notifier
 ```
 
 Codex 会自动执行以下命令完成安装：
