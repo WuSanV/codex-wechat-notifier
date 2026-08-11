@@ -43,7 +43,7 @@ codex plugin marketplace add WuSanV/codex-wechat-notifier
 codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
-安装完成后，请按照提示，输入绑定微信通知，用微信扫码绑定，然后新建一个 Codex 对话让插件生效。
+安装完成后，请按照提示，输入绑定微信通知，用微信扫码绑定，扫码后按页面提示向新机器人发送任意一条消息，然后新建一个 Codex 对话让插件生效。
 
 ### 方式二：手动执行命令安装
 
@@ -54,7 +54,7 @@ codex plugin marketplace add WuSanV/codex-wechat-notifier
 codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
-安装后请新建一个 Codex 对话，按照提示输入"绑定微信通知"，用微信扫码绑定，然后新建一个 Codex 对话让插件生效。
+安装后请新建一个 Codex 对话，按照提示输入"绑定微信通知"，用微信扫码绑定，扫码后按页面提示向新机器人发送任意一条消息，然后新建一个 Codex 对话让插件生效。
 
 #### Codex 桌面版用户
 
@@ -75,7 +75,7 @@ codex plugin marketplace add ./codex-wechat-notifier
 codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
-安装后请新建一个 Codex 对话，按照提示输入"绑定微信通知"，用微信扫码绑定，然后新建一个 Codex 对话让插件生效。
+安装后请新建一个 Codex 对话，按照提示输入"绑定微信通知"，用微信扫码绑定，扫码后按页面提示向新机器人发送任意一条消息，然后新建一个 Codex 对话让插件生效。
 
 如果 PowerShell 因执行策略阻止 `codex.ps1`，可在 Windows 上把上述命令中的 `codex` 临时替换为 `codex.cmd`。
 
