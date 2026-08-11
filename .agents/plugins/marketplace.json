@@ -1,0 +1,20 @@
+{
+  "name": "codex-wechat-notifier",
+  "interface": {
+    "displayName": "Codex Wechat Notifier"
+  },
+  "plugins": [
+    {
+      "name": "codex-wechat-notifier",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-wechat-notifier"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

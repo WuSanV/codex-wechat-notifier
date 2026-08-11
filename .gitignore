@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+node_modules/
+coverage/
+
+# Never commit local notifier credentials, logs, or captured hook payloads.
+.codex-wechat-notifier/
+account.json
+notifier.log
+hook-payload.jsonl

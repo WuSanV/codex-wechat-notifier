@@ -1,0 +1,32 @@
+{
+  "name": "codex-wechat-notifier",
+  "version": "0.1.1",
+  "description": "Send completed Codex CLI turns and their final answers to WeChat through ClawBot.",
+  "author": {
+    "name": "Codex WeChat Notifier contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "wechat",
+    "clawbot",
+    "notification",
+    "hooks",
+    "cli"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex WeChat Notifier",
+    "shortDescription": "Send completed CLI turns to WeChat",
+    "longDescription": "Bind a WeChat account through ClawBot, then receive a notification containing the final answer whenever a Codex CLI turn completes.",
+    "developerName": "Codex WeChat Notifier contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "Bind WeChat for Codex completion notifications",
+      "Check my WeChat notifier status",
+      "Send a test notification to WeChat"
+    ]
+  }
+}

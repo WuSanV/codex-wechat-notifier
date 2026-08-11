@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Notifier"
+  short_description: "Bind WeChat and manage Codex completion notifications"
+  default_prompt: "Bind my WeChat to receive Codex CLI completion notifications."
