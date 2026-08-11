@@ -1,6 +1,6 @@
 # Codex WeChat Notifier
 
-把 Codex CLI 每轮任务完成后的最终回答发送到微信。插件通过微信 ClawBot 完成扫码绑定，并通过 Codex `Stop` hook 自动推送通知。
+在 Codex CLI 完成任务后，把最终结果发送到微信来提醒用户任务完成。插件通过微信 ClawBot 完成扫码绑定，并通过 Codex `Stop` hook 自动推送通知。
 
 ## 功能
 
