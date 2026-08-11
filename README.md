@@ -30,7 +30,7 @@ node --version
 
 ### 方式一：在 Codex 对话中直接安装（推荐）
 
-Codex CLI 和桌面版都可以自行执行终端命令，因此你可以直接在 Codex 对话中用自然语言完成安装。把下面的 `YOUR_GITHUB_USERNAME` 替换为实际 GitHub 用户名，对 Codex 说：
+Codex CLI 和桌面版都可以自行执行终端命令，因此你可以直接在 Codex 对话中用自然语言完成安装。对 Codex 说：
 
 ```text
 帮我安装 https://github.com/WuSanV/codex-wechat-notifier
@@ -39,7 +39,7 @@ Codex CLI 和桌面版都可以自行执行终端命令，因此你可以直接�
 Codex 会自动执行以下命令完成安装：
 
 ```bash
-codex plugin marketplace add YOUR_GITHUB_USERNAME/codex-wechat-notifier
+codex plugin marketplace add WuSanV/codex-wechat-notifier
 codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
@@ -50,7 +50,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 在终端中依次执行以下命令：
 
 ```bash
-codex plugin marketplace add YOUR_GITHUB_USERNAME/codex-wechat-notifier
+codex plugin marketplace add WuSanV/codex-wechat-notifier
 codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
@@ -61,7 +61,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 桌面版安装后会在本地生成 `codex.exe`，通常位于 `安装目录\resources\` 下。如果终端中直接输入 `codex` 无法识别，请使用完整路径调用：
 
 ```powershell
-& "你的Codex安装目录\resources\codex.exe" plugin marketplace add YOUR_GITHUB_USERNAME/codex-wechat-notifier
+& "你的Codex安装目录\resources\codex.exe" plugin marketplace add WuSanV/codex-wechat-notifier
 & "你的Codex安装目录\resources\codex.exe" plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
@@ -70,7 +70,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ### 从本地克隆安装
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/codex-wechat-notifier.git
+git clone https://github.com/WuSanV/codex-wechat-notifier.git
 codex plugin marketplace add ./codex-wechat-notifier
 codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
