@@ -26,11 +26,11 @@ node --version
 
 ## 从 GitHub 安装
 
-仓库名保持为 `codex-wechat-notifier` 时，有以下两种安装方式。
+仓库名保持为 `codex-wechat-notifier` 时，有以下两种安装方式。两种方式同时适用于 Codex CLI 和 Codex 桌面版。
 
 ### 方式一：在 Codex 对话中直接安装（推荐）
 
-Codex CLI 可以自行执行终端命令，因此你可以直接在 Codex 对话中用自然语言完成安装。把下面的 `YOUR_GITHUB_USERNAME` 替换为实际 GitHub 用户名，对 Codex 说：
+Codex CLI 和桌面版都可以自行执行终端命令，因此你可以直接在 Codex 对话中用自然语言完成安装。把下面的 `YOUR_GITHUB_USERNAME` 替换为实际 GitHub 用户名，对 Codex 说：
 
 ```text
 帮我安装 https://github.com/WuSanV/codex-wechat-notifier
@@ -55,6 +55,17 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```
 
 安装后请新建一个 Codex 对话，让 Codex 加载新插件。
+
+#### Codex 桌面版用户
+
+桌面版安装后会在本地生成 `codex.exe`，通常位于 `安装目录\resources\` 下。如果终端中直接输入 `codex` 无法识别，请使用完整路径调用：
+
+```powershell
+& "你的Codex安装目录\resources\codex.exe" plugin marketplace add YOUR_GITHUB_USERNAME/codex-wechat-notifier
+& "你的Codex安装目录\resources\codex.exe" plugin add codex-wechat-notifier@codex-wechat-notifier
+```
+
+也可以打开 Codex 桌面版，在左侧 **Plugins** 面板中搜索并安装。
 
 ### 从本地克隆安装
 
