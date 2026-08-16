@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { activationRoute } from "../plugins/codex-wechat-notifier/scripts/lib/ilink.mjs";
+import { activationRoute, IlinkClient } from "../plugins/codex-wechat-notifier/scripts/lib/ilink.mjs";
 import { formatNotification, handleStop } from "../plugins/codex-wechat-notifier/scripts/on-stop.mjs";
 
 test("activationRoute falls back to the sender for an empty private-chat group id", () => {
@@ -28,6 +28,33 @@ test("activationRoute rejects messages from another account", () => {
   assert.equal(
     activationRoute({ context_token: "context-3", from_user_id: "user-2" }, "user-1"),
     null,
+  );
+});
+
+test("IlinkClient accepts string zero response codes", async () => {
+  for (const responseBody of [{ ret: "0" }, { errcode: "0" }]) {
+    const client = new IlinkClient({
+      token: "test-token",
+      fetchImpl: async () => new Response(JSON.stringify(responseBody), { status: 200 }),
+    });
+
+    await assert.doesNotReject(() => client.sendText({
+      contextToken: "context-1",
+      text: "hello",
+      toUserId: "user-1",
+    }));
+  }
+});
+
+test("IlinkClient rejects non-zero response codes", async () => {
+  const client = new IlinkClient({
+    token: "test-token",
+    fetchImpl: async () => new Response(JSON.stringify({ ret: "1" }), { status: 200 }),
+  });
+
+  await assert.rejects(
+    () => client.sendText({ contextToken: "context-1", text: "hello", toUserId: "user-1" }),
+    /ClawBot request failed \(HTTP 200\)/u,
   );
 });
 

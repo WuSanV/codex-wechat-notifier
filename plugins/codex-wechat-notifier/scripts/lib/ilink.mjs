@@ -56,7 +56,7 @@ export class IlinkClient {
     });
     const text = await response.text();
     const parsed = text ? JSON.parse(text) : {};
-    if (!response.ok || parsed.errcode || parsed.ret) {
+    if (!response.ok || hasFailureCode(parsed.errcode) || hasFailureCode(parsed.ret)) {
       throw new Error(`ClawBot request failed (HTTP ${response.status})`);
     }
     return parsed;
@@ -130,6 +130,15 @@ async function loginGet(baseUrl, endpoint, fetchImpl) {
 
 function baseInfo() {
   return { channel_version: "0.1.0" };
+}
+
+function hasFailureCode(value) {
+  if (value === undefined || value === null) return false;
+  if (typeof value === "string") {
+    const normalized = value.trim();
+    return normalized !== "" && normalized !== "0";
+  }
+  return value !== 0 && value !== false;
 }
 
 function randomWechatUin() {

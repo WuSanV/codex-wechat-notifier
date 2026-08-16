@@ -1,6 +1,6 @@
 {
   "name": "codex-wechat-notifier",
-  "version": "0.1.1",
+  "version": "0.1.1+codex.20260815094245",
   "description": "Send completed Codex CLI turns and their final answers to WeChat through ClawBot.",
   "author": {
     "name": "Codex WeChat Notifier contributors"
