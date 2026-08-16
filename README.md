@@ -85,13 +85,14 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 Hooks need review
 1 hook is new or changed.
 Hooks can run outside the sandbox after you trust them.
-1. Trust all and continue
-2. Continue without trusting (hooks won't run)
+1. Review hooks
+2. Trust all and continue
+3. Continue without trusting (hooks won't run)
 ```
 
-选择 **1. Trust all and continue**。
+**选 2（Trust all and continue）最方便**，一步到位。
 
-随后进入 Stop hooks 列表，找到 codex-wechat-notifier 的 hook，按 **Space** 或 **Enter** 将其切换为 `[x]` 开启状态：
+如果选 **1（Review hooks）**，则需要手动操作：进入 Stop hooks 列表，找到 codex-wechat-notifier 的 hook，按 **Space** 或 **Enter** 将其切换为 `[x]` 开启状态：
 
 ```
 [x] Hook 1
@@ -103,7 +104,7 @@ Hooks can run outside the sandbox after you trust them.
   Trust     Trusted
 ```
 
-按 **Esc** 返回即可。Hook 启用后，每轮 Codex 任务结束时就会自动触发微信通知。
+然后按 **Esc** 返回即可。Hook 启用后，每轮 Codex 任务结束时就会自动触发微信通知。
 
 ### 验证安装
 
@@ -264,7 +265,7 @@ node --check plugins/codex-wechat-notifier/scripts/on-stop.mjs
 按以下顺序排查：
 
 1. **确认插件已安装**：执行 `codex plugin list --json`，确认 `"installed": true`。
-2. **确认 Hook 已信任并启用**：安装后重新打开 Codex 时，必须选择 Trust all 并确保 Stop hook 标记为 `[x]`。
+2. **确认 Hook 已信任并启用**：安装后重新打开 Codex 时，会弹出 Hooks 审核提示。选 2（Trust all and continue）最省事；如果选 1（Review hooks），则需手动进入 Stop hooks 列表，按 Space/Enter 将对应 hook 切换为 `[x]` 开启。
 3. **确认新建了对话**：安装后必须新建 Codex 对话才能加载 hooks。
 4. **查看日志**：绑定状态正常但仍失败时，查看 `~/.codex-wechat-notifier/notifier.log`；分享日志前请先检查并移除敏感信息。
 
