@@ -38,7 +38,7 @@ Codex 会自动执行以下命令完成安装：
 
 ```bash
 codex plugin marketplace add WuSanV/codex-wechat-notifier
-codex plugin add codex-wechat-notifier@codex-wechat-notifier
+codex plugin add codex-wechat-notifier@personal
 ```
 
 ### 方式二：手动执行命令安装
@@ -47,7 +47,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 
 ```bash
 codex plugin marketplace add WuSanV/codex-wechat-notifier
-codex plugin add codex-wechat-notifier@codex-wechat-notifier
+codex plugin add codex-wechat-notifier@personal
 ```
 
 #### Codex 桌面版用户
@@ -56,7 +56,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 
 ```powershell
 & "你的Codex安装目录\resources\codex.exe" plugin marketplace add WuSanV/codex-wechat-notifier
-& "你的Codex安装目录\resources\codex.exe" plugin add codex-wechat-notifier@codex-wechat-notifier
+& "你的Codex安装目录\resources\codex.exe" plugin add codex-wechat-notifier@personal
 ```
 
 也可以打开 Codex 桌面版，在左侧 **Plugins** 面板中搜索并安装。
@@ -68,7 +68,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 ```bash
 git clone https://github.com/WuSanV/codex-wechat-notifier.git
 codex plugin marketplace add ./codex-wechat-notifier
-codex plugin add codex-wechat-notifier@codex-wechat-notifier
+codex plugin add codex-wechat-notifier@personal
 ```
 
 如果 PowerShell 因执行策略阻止 `codex.ps1`，可在 Windows 上把上述命令中的 `codex` 临时替换为 `codex.cmd`。
@@ -169,7 +169,7 @@ node "$plugin\scripts\connect.mjs" test
 
 ```bash
 codex plugin marketplace upgrade codex-wechat-notifier
-codex plugin add codex-wechat-notifier@codex-wechat-notifier
+codex plugin add codex-wechat-notifier@personal
 ```
 
 更新或重新安装后，请新建一个 Codex 对话以加载新版本。原有绑定状态不受影响，无需重新扫码。
@@ -179,7 +179,7 @@ codex plugin add codex-wechat-notifier@codex-wechat-notifier
 建议先在 Codex 中说"解绑微信通知"并确认删除本地凭据，然后执行：
 
 ```bash
-codex plugin remove codex-wechat-notifier@codex-wechat-notifier
+codex plugin remove codex-wechat-notifier@personal
 ```
 
 如果插件已经卸载但仍需手动清理绑定状态，可删除用户主目录中的 `.codex-wechat-notifier` 目录。该目录可能包含 ClawBot 令牌，请勿上传或分享其中内容。
